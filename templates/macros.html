@@ -1,6 +1,14 @@
 {% macro social_links(social_config) %}
 <p>
 
+  {% if social_config.telegram %}
+  <a href="https://t.me/{{ social_config.telegram }}" target="_blank">
+    <span class="icon is-large" title="Telegram">
+      <i class="fab fa-telegram fa-lg"></i>
+    </span>
+  </a>
+  {% endif %}
+
   {% if social_config.google_scholar %}
   <a href="https://scholar.google.com/citations?user={{ social_config.google_scholar }}" target="_blank">
     <span class="icon is-large" title="Google Scholar">
