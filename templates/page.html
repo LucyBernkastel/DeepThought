@@ -131,6 +131,14 @@
     </div>
   </div>
 </section>
+{% elif page.extra.comments and config.extra.commenting.repo %}
+<script src="https://utteranc.es/client.js"
+        repo="{{ config.extra.commenting.repo }}"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
 {% endif %}
 {% endblock %}
 
